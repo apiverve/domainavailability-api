@@ -12,7 +12,6 @@ namespace APIVerve.API.DomainAvailability
     {
         /// <summary>
         /// The domain to check if it is available
-        /// Example: myspace.com
         /// </summary>
         [JsonProperty("domain")]
         public string Domain { get; set; }
