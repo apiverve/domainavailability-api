@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_domainavailability',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/domainavailability',
-        'Source': 'https://github.com/apiverve/domainavailability-api',
-        'Bug Tracker': 'https://github.com/apiverve/domainavailability-api/issues'
-    },
+    url='https://domainavailability.apiverve.com?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
