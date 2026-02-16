@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/domainavailability",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.",
   "main": "index.js",
   "types": "index.d.ts",
