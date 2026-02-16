@@ -220,8 +220,9 @@ from apiverve_domainavailability.apiClient import DomainavailabilityAPIClient
 
 api = DomainavailabilityAPIClient("[YOUR_API_KEY]")
 
+query = { "domain": "myspace.com" }
+
 try:
-    query = { "domain": "myspace.com" }
     result = api.execute(query)
     print(result)
 finally:
