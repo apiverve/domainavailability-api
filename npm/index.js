@@ -30,7 +30,7 @@ class domainavailabilityWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/domainavailability';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"domain":{"type":"string","required":true}};
+        this.validationRules = {"domain":{"type":"string","required":true,"format":"domain"}};
     }
 
     /**
