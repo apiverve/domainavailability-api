@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/domainavailability",
+    "description": "Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "domainavailability",
+        "domain availability checker",
+        "domain availability checker api",
+        "domain availability checker tool",
+        "domain availability checker software",
+        "domain availability checker service"
+    ],
+    "homepage": "https://domainavailability.apiverve.com?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/domainavailability",
+        "source": "https://github.com/apiverve/domainavailability-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Domainavailability\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Domainavailability\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
