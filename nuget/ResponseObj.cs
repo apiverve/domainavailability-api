@@ -25,6 +25,9 @@ namespace APIVerve.API.DomainAvailability
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.DomainAvailability
         public string Domain { get; set; }
 
         [JsonProperty("available")]
-        public bool Available { get; set; }
+        public bool? Available { get; set; }
 
         [JsonProperty("owner")]
         public Owner Owner { get; set; }
@@ -43,5 +46,17 @@ namespace APIVerve.API.DomainAvailability
     {
         [JsonProperty("registrar")]
         public string Registrar { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
