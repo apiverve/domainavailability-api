@@ -1,13 +1,12 @@
 Domain Availability API
 ============
 
-Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.
+Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Domain Availability API](https://domainavailability.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-domainavailability.svg)](https://pypi.org/project/apiverve-domainavailability/)
+
+This is a Python wrapper for the [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-domainavailability
 
 ## Configuration
 
-Before using the domainavailability API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Domain Availability API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Domain Availability API documentation is found here: [https://docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=pypi&utm_medium=readme).
+The Domain Availability API documentation is found here: [https://docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -105,7 +104,30 @@ print(result)
     "domain": "myspace.com",
     "available": false,
     "owner": {
-      "registrar": "GoDaddy.com, LLC"
+      "registrar": "GoDaddy.com, LLC",
+      "createdDate": "1996-02-22T05:00:00Z",
+      "expiryDate": "2029-02-23T05:00:00Z"
+    },
+    "source": "rdap",
+    "pricing": {
+      "tld": "com",
+      "currency": "USD",
+      "registration": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "renewal": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "transfer": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "sources": 2,
+      "premiumLikely": null,
+      "premiumReason": null,
+      "updatedAt": "2026-10-18T10:00:00.000Z"
     }
   }
 }
@@ -234,7 +256,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -245,12 +267,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
