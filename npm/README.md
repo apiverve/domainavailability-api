@@ -1,13 +1,10 @@
 # Domain Availability API
 
-Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.
+Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/domainavailability.svg)](https://www.npmjs.com/package/@apiverve/domainavailability)
 
-This is a Javascript Wrapper for the [Domain Availability API](https://domainavailability.apiverve.com?utm_source=npm&utm_medium=readme)
+This is a JavaScript wrapper for the [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -28,15 +25,15 @@ yarn add @apiverve/domainavailability
 ## Configuration
 
 Before using the Domain Availability API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=referral&utm_content=readme)
 
-The Domain Availability API documentation is found here: [https://docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=npm&utm_medium=readme).
+The Domain Availability API documentation is found here: [https://docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=npm&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -125,7 +122,30 @@ async function makeRequest() {
     "domain": "myspace.com",
     "available": false,
     "owner": {
-      "registrar": "GoDaddy.com, LLC"
+      "registrar": "GoDaddy.com, LLC",
+      "createdDate": "1996-02-22T05:00:00Z",
+      "expiryDate": "2029-02-23T05:00:00Z"
+    },
+    "source": "rdap",
+    "pricing": {
+      "tld": "com",
+      "currency": "USD",
+      "registration": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "renewal": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "transfer": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "sources": 2,
+      "premiumLikely": null,
+      "premiumReason": null,
+      "updatedAt": "2026-10-18T10:00:00.000Z"
     }
   }
 }
@@ -135,7 +155,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -147,12 +167,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=referral&utm_content=readme) and [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

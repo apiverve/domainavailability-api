@@ -28,10 +28,31 @@ declare module '@apiverve/domainavailability' {
       domain:    null | string;
       available: boolean | null;
       owner:     Owner;
+      source:    null | string;
+      pricing:   Pricing;
   }
   
   interface Owner {
-      registrar: null | string;
+      registrar:   null | string;
+      createdDate: Date | null;
+      expiryDate:  Date | null;
+  }
+  
+  interface Pricing {
+      tld:           null | string;
+      currency:      null | string;
+      registration:  Registration;
+      renewal:       Registration;
+      transfer:      Registration;
+      sources:       number | null;
+      premiumLikely: null;
+      premiumReason: null;
+      updatedAt:     Date | null;
+  }
+  
+  interface Registration {
+      low:  number | null;
+      high: number | null;
   }
 
   export default class domainavailabilityWrapper {

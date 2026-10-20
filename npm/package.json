@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/domainavailability",
-  "version": "1.2.0",
-  "description": "Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.",
+  "version": "1.2.2",
+  "description": "Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "domain availability checker", "domain availability checker api", "domain availability checker tool", "domain availability checker software", "domain availability checker service"
+    "domain availability api", "bulk domain name checker", "bulk domain availability check", "domain check api", "domain api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/domainavailability-api/issues"
   },
-  "homepage": "https://domainavailability.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/domainavailability?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
