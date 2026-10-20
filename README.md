@@ -1,13 +1,13 @@
-# [Domain Availability API](https://domainavailability.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.
+Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew.
 
 The Domain Availability API provides a simple, reliable way to integrate domain availability functionality into your applications. Built for developers who need production-ready domain availability capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://domainavailability.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/domainavailability?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://domainavailability.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/domainavailability?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/domainavailability-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Domain Availability API](https://domainavailability.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -214,7 +214,30 @@ A real response from the Domain Availability API:
     "domain": "myspace.com",
     "available": false,
     "owner": {
-      "registrar": "GoDaddy.com, LLC"
+      "registrar": "GoDaddy.com, LLC",
+      "createdDate": "1996-02-22T05:00:00Z",
+      "expiryDate": "2029-02-23T05:00:00Z"
+    },
+    "source": "rdap",
+    "pricing": {
+      "tld": "com",
+      "currency": "USD",
+      "registration": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "renewal": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "transfer": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "sources": 2,
+      "premiumLikely": null,
+      "premiumReason": null,
+      "updatedAt": "2026-10-18T10:00:00.000Z"
     }
   }
 }
@@ -224,7 +247,7 @@ A real response from the Domain Availability API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Domain Availability API](https://domainavailability.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

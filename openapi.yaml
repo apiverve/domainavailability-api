@@ -2,8 +2,10 @@ openapi: 3.0.4
 info:
   title: Domain Availability
   description: >-
-    Domain Availability Checker is a simple tool for checking the availability
-    of a domain. It returns if the domain is available or not.
+    Domain Availability checks domain availability in real time to show if a web
+    address is open for registration or already taken. Get creation and
+    expiration dates for taken domains, while paid plans add registrar details
+    and what the domain costs to register and renew.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +20,7 @@ servers:
 paths:
   /v1/domainavailability:
     get:
-      summary: Check Domain Availability
+      summary: Domain Availability
       description: Check if a domain is available
       operationId: domainavailability
       parameters:
@@ -54,6 +56,25 @@ paths:
                   available: false
                   owner:
                     registrar: GoDaddy.com, LLC
+                    createdDate: '1996-02-22T05:00:00Z'
+                    expiryDate: '2029-02-23T05:00:00Z'
+                  source: rdap
+                  pricing:
+                    tld: com
+                    currency: USD
+                    registration:
+                      low: 11.08
+                      high: 11.25
+                    renewal:
+                      low: 11.08
+                      high: 11.25
+                    transfer:
+                      low: 11.08
+                      high: 11.25
+                    sources: 2
+                    premiumLikely: null
+                    premiumReason: null
+                    updatedAt: '2026-10-18T10:00:00.000Z'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
