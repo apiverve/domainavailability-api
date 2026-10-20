@@ -40,12 +40,63 @@ namespace APIVerve.API.DomainAvailability
 
         [JsonProperty("owner")]
         public Owner Owner { get; set; }
+
+        [JsonProperty("source")]
+        public string Source { get; set; }
+
+        [JsonProperty("pricing")]
+        public Pricing Pricing { get; set; }
     }
 
     public partial class Owner
     {
         [JsonProperty("registrar")]
         public string Registrar { get; set; }
+
+        [JsonProperty("createdDate")]
+        public DateTimeOffset? CreatedDate { get; set; }
+
+        [JsonProperty("expiryDate")]
+        public DateTimeOffset? ExpiryDate { get; set; }
+    }
+
+    public partial class Pricing
+    {
+        [JsonProperty("tld")]
+        public string Tld { get; set; }
+
+        [JsonProperty("currency")]
+        public string Currency { get; set; }
+
+        [JsonProperty("registration")]
+        public Registration Registration { get; set; }
+
+        [JsonProperty("renewal")]
+        public Registration Renewal { get; set; }
+
+        [JsonProperty("transfer")]
+        public Registration Transfer { get; set; }
+
+        [JsonProperty("sources")]
+        public long? Sources { get; set; }
+
+        [JsonProperty("premiumLikely")]
+        public object PremiumLikely { get; set; }
+
+        [JsonProperty("premiumReason")]
+        public object PremiumReason { get; set; }
+
+        [JsonProperty("updatedAt")]
+        public DateTimeOffset? UpdatedAt { get; set; }
+    }
+
+    public partial class Registration
+    {
+        [JsonProperty("low")]
+        public double? Low { get; set; }
+
+        [JsonProperty("high")]
+        public double? High { get; set; }
     }
 
     public partial class Premium

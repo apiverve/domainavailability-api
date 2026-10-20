@@ -1,13 +1,12 @@
-DomainAvailability API
+Domain Availability API
 ============
 
-Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.
+Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [DomainAvailability API](https://domainavailability.apiverve.com?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.DomainAvailability.svg)](https://www.nuget.org/packages/APIVerve.API.DomainAvailability)
+
+This is a .NET wrapper for the [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the domainavailability API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Domain Availability API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,8 +60,8 @@ class Program
         var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DomainAvailabilityQueryOptions {
-    Domain = "myspace.com"
-};
+            Domain = "myspace.com"
+        };
 
         // Make the API call
         try
@@ -92,13 +91,13 @@ class Program
 
 ## Usage
 
-The DomainAvailability API documentation is found here: [https://docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=nuget&utm_medium=readme).
+The Domain Availability API documentation is found here: [https://docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-DomainAvailability API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Domain Availability API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -125,8 +124,8 @@ public class Example
         var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DomainAvailabilityQueryOptions {
-    Domain = "myspace.com"
-};
+            Domain = "myspace.com"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -157,8 +156,8 @@ public class Example
         var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DomainAvailabilityQueryOptions {
-    Domain = "myspace.com"
-};
+            Domain = "myspace.com"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -194,8 +193,8 @@ public class Example
         var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DomainAvailabilityQueryOptions {
-    Domain = "myspace.com"
-};
+            Domain = "myspace.com"
+        };
 
         try
         {
@@ -250,8 +249,8 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new DomainAvailabilityQueryOptions {
-    Domain = "myspace.com"
-};
+            Domain = "myspace.com"
+        };
 
         try
         {
@@ -370,7 +369,30 @@ using (var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]"))
     "domain": "myspace.com",
     "available": false,
     "owner": {
-      "registrar": "GoDaddy.com, LLC"
+      "registrar": "GoDaddy.com, LLC",
+      "createdDate": "1996-02-22T05:00:00Z",
+      "expiryDate": "2029-02-23T05:00:00Z"
+    },
+    "source": "rdap",
+    "pricing": {
+      "tld": "com",
+      "currency": "USD",
+      "registration": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "renewal": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "transfer": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "sources": 2,
+      "premiumLikely": null,
+      "premiumReason": null,
+      "updatedAt": "2026-10-18T10:00:00.000Z"
     }
   }
 }
@@ -380,7 +402,7 @@ using (var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -391,12 +413,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
