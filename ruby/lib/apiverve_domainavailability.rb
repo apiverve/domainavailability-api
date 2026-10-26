@@ -4,6 +4,6 @@ require_relative "apiverve_domainavailability/client"
 
 module APIVerve
   module Domainavailability
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
