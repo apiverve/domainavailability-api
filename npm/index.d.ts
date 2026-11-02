@@ -25,11 +25,17 @@ declare module '@apiverve/domainavailability' {
 
 
   interface DomainAvailabilityData {
-      domain:    null | string;
-      available: boolean | null;
-      owner:     Owner;
-      source:    null | string;
-      pricing:   Pricing;
+      domain:         null | string;
+      available:      boolean | null;
+      owner:          Owner;
+      source:         null | string;
+      pricing:        Pricing;
+      lifecycle:      null | string;
+      eppStatus:      (null | string)[];
+      nameservers:    (null | string)[];
+      isParked:       boolean | null;
+      isForSale:      boolean | null;
+      parkingService: null;
   }
   
   interface Owner {
