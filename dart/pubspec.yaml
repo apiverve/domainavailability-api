@@ -1,7 +1,7 @@
 name: apiverve_domainavailability
-description: Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.
-version: 1.1.14
-homepage: https://domainavailability.apiverve.com?utm_source=dart&utm_medium=homepage
+description: "Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew."
+version: 1.2.4
+homepage: https://apiverve.com/marketplace/domainavailability?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/domainavailability-api/tree/main/dart
 
 environment:

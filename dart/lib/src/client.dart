@@ -46,10 +46,10 @@ final _formatPatterns = {
 
 /// Domain Availability API client.
 ///
-/// For more information, visit: https://domainavailability.apiverve.com?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/domainavailability?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [domain] (required) - The domain to check if it is available
+/// * [domain] (required) - The domain to check if it is available [format: domain]
 class DomainavailabilityClient {
   final String apiKey;
   final String baseUrl;
@@ -57,7 +57,7 @@ class DomainavailabilityClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'domain': ValidationRule(type: 'string', required: true),
+    'domain': ValidationRule(type: 'string', required: true, format: 'domain'),
   };
 
   DomainavailabilityClient(this.apiKey, {

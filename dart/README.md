@@ -1,11 +1,11 @@
 # Domain Availability API - Dart/Flutter Client
 
-Domain Availability Checker is a simple tool for checking the availability of a domain. It returns if the domain is available or not.
+Domain Availability checks domain availability in real time to show if a web address is open for registration or already taken. Get creation and expiration dates for taken domains, while paid plans add registrar details and what the domain costs to register and renew.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_domainavailability.svg)](https://pub.dev/packages/apiverve_domainavailability)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Domain Availability API](https://domainavailability.apiverve.com?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_domainavailability: ^1.1.14
+  apiverve_domainavailability: ^1.2.4
 ```
 
 Then run:
@@ -55,20 +55,59 @@ void main() async {
     "domain": "myspace.com",
     "available": false,
     "owner": {
-      "registrar": "GoDaddy.com, LLC"
-    }
+      "registrar": "GoDaddy.com, LLC",
+      "createdDate": "1996-02-22T05:00:00Z",
+      "expiryDate": "2029-02-23T05:00:00Z"
+    },
+    "source": "rdap",
+    "pricing": {
+      "tld": "com",
+      "currency": "USD",
+      "registration": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "renewal": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "transfer": {
+        "low": 11.08,
+        "high": 11.25
+      },
+      "sources": 2,
+      "premiumLikely": null,
+      "premiumReason": null,
+      "updatedAt": "2026-10-18T10:00:00.000Z"
+    },
+    "lifecycle": "registered",
+    "eppStatus": [
+      "client delete prohibited",
+      "client renew prohibited",
+      "client transfer prohibited",
+      "client update prohibited"
+    ],
+    "nameservers": [
+      "ns-cloud-a1.googledomains.com",
+      "ns-cloud-a2.googledomains.com",
+      "ns-cloud-a3.googledomains.com",
+      "ns-cloud-a4.googledomains.com"
+    ],
+    "isParked": false,
+    "isForSale": false,
+    "parkingService": null
   }
 }
 ```
 
 ## API Reference
 
-- **API Home:** [Domain Availability API](https://domainavailability.apiverve.com?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=dart&utm_medium=readme)
+- **API Home:** [Domain Availability API](https://apiverve.com/marketplace/domainavailability?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/domainavailability](https://docs.apiverve.com/ref/domainavailability?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -76,4 +115,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
