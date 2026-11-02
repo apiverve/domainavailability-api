@@ -46,6 +46,24 @@ namespace APIVerve.API.DomainAvailability
 
         [JsonProperty("pricing")]
         public Pricing Pricing { get; set; }
+
+        [JsonProperty("lifecycle")]
+        public string Lifecycle { get; set; }
+
+        [JsonProperty("eppStatus")]
+        public string[] EppStatus { get; set; }
+
+        [JsonProperty("nameservers")]
+        public string[] Nameservers { get; set; }
+
+        [JsonProperty("isParked")]
+        public bool? IsParked { get; set; }
+
+        [JsonProperty("isForSale")]
+        public bool? IsForSale { get; set; }
+
+        [JsonProperty("parkingService")]
+        public object ParkingService { get; set; }
     }
 
     public partial class Owner

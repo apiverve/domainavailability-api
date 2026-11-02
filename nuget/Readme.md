@@ -393,7 +393,23 @@ using (var apiClient = new DomainAvailabilityAPIClient("[YOUR_API_KEY]"))
       "premiumLikely": null,
       "premiumReason": null,
       "updatedAt": "2026-10-18T10:00:00.000Z"
-    }
+    },
+    "lifecycle": "registered",
+    "eppStatus": [
+      "client delete prohibited",
+      "client renew prohibited",
+      "client transfer prohibited",
+      "client update prohibited"
+    ],
+    "nameservers": [
+      "ns-cloud-a1.googledomains.com",
+      "ns-cloud-a2.googledomains.com",
+      "ns-cloud-a3.googledomains.com",
+      "ns-cloud-a4.googledomains.com"
+    ],
+    "isParked": false,
+    "isForSale": false,
+    "parkingService": null
   }
 }
 ```
